@@ -1,0 +1,356 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "initial-scale=1", :name => "viewport"}
+        %title Home - Basix
+        = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+        = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body.light-bg.home
+    .main-container
+      .topbar-outer.dark
+        .topbar.content-width
+          .table.fullheight
+            .table-cell.fullheight.middle
+              .logo
+                %a{:href => "index.html"}
+                  %img{:alt => "", :height => "17", :src => "/assets/topbar/logo_white.png"}/
+          %ul.topsocial
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-linkedin-square
+                .tooltip LinkedIn
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-facebook
+                .tooltip Facebook
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-twitter
+                .tooltip Twitter
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-google-plus
+                .tooltip Google+
+          %ul.topnav
+            %li
+              %a.current{:href => "index.html"} Home
+            %li
+              %a{:href => "about.html"} About Us
+            %li
+              %a.drop{:href => "portfolio.html"} Portfolio
+              %ul
+                %li
+                  %a{:href => "portfolio.html"} 4 Column Portfolio
+                %li
+                  %a{:href => "portfolio-3-columns.html"} 3 Column Portfolio
+                %li
+                  %a{:href => "portfolio-detail.html"} Portfolio Detail
+            %li
+              %a.drop{:href => "blog.html"} Blog
+              %ul
+                %li
+                  %a{:href => "blog.html"} Article List
+                %li
+                  %a{:href => "blog-post.html"} Blog Post
+            %li
+              %a{:href => "shortcodes.html"} Shortcodes
+            %li
+              %a{:href => "contact.html"} Contact Us
+          %a.mobilenav-click{:href => "#"}
+            .mobilenav-button-container
+              .mobilenav-button-inner
+                .mobilenav-button
+          .mobilenav-container
+            %ul.mobilenav
+      .home-banner.dark
+        %ul#home-slider.slider-container
+          %li.slide-outer
+            .slide-inner
+              .content-width
+                .slide-style-1
+                  %h1
+                    Super Clean Corporate &amp; Portfolio
+                    %span HTML
+                    Theme
+                    %span .
+                  %p Bang up to date styling with flat UI, touch swipe  enabled sliders / carousels and super intelligent coding.
+          %li.slide-outer
+            .slide-inner
+              .content-width
+                .slide-style-2
+                  .icon-container
+                    .icon-backing
+                      %i.fa.fa-css3
+                  %h1
+                    Ultra Responsive Layout
+                    %span .
+                  %p Looks and functions perfectly on desktops, laptops, tablets and mobile devices. Check it out!
+          %li.slide-outer
+            .slide-inner
+              .content-width
+                .slide-style-3
+                  .left-column
+                    %h1
+                      Don't feel limited to color schemes provided
+                      %span .
+                    %p Basix has been coded in a way to allow you to have any color scheme you like without ever having to open up Photoshop.
+                    %a.button.accent{:href => "#"}
+                      %i.fa.fa-info-circle>
+                      More Info
+                    %a.button.white{:href => "#"}
+                      %i.fa.fa-envelope>
+                      Contact Us
+                  .right-column
+                    %img{:alt => "", :src => "/assets/iphone-image.png"}/
+        .slider-nav-container
+          .slider-nav-inner
+            .slider-nav.content-width
+              %ul#bx-pager
+                %li
+                  %a{"data-slide-index" => "0", :href => ""} Super Clean Template
+                %li
+                  %a{"data-slide-index" => "1", :href => ""} Ultra Responsive Layout
+                %li
+                  %a{"data-slide-index" => "2", :href => ""} Unlimited Colors
+              .slider-controls
+                #slider-pause
+                #slider-prev
+                #slider-next
+      .home-cta-bar-container.accent
+        .content-width
+          .home-cta-bar
+            .text
+              A super easy to use PSD, HTML and WordPress theme ready to serve almost all business types.
+            .home-cta-bar-button
+              %a.button.transparent{:href => "#"}
+                %i.fa.fa-shopping-cart>
+                Purchase Theme
+      .main-content
+        .main-content-inner.content-width
+          .column-container
+            .column-one-third
+              .icons-column
+                .icon-backing{:style => "background-color: #66b9b4;"}
+                  %i.fa.fa-heart
+              .content-column
+                %h3 Timeless Design
+                %p Lorem Ipsum is simply dummy text of the printing and typesetting.
+            .column-one-third
+              .icons-column
+                .icon-backing{:style => "background-color: #6E6588;"}
+                  %i.fa.fa-font
+              .content-column
+                %h3 Great Typography
+                %p Lorem Ipsum is simply dummy text of the printing and typesetting.
+            .column-one-third
+              .icons-column
+                .icon-backing{:style => "background-color: #63885F;"}
+                  %i.fa.fa-fullscreen
+              .content-column
+                %h3 Responsive Layout
+                %p Lorem Ipsum is simply dummy text of the printing and typesetting.
+          .divider
+          %h3.section-title Latest Work
+          #portfolio-nav.carousel-nav
+            .back
+            .next
+          .carousel
+            %ul#portfolio-carousel.slider-container
+              %li.column-one-fourth.portfolio-item.branding
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} ATEX Sportsware
+                .tags Branding
+              %li.column-one-fourth.portfolio-item.coding
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} Farmers Insurance
+                .tags Code Development
+              %li.column-one-fourth.portfolio-item.branding.identity
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} Royal Palm Plaza
+                .tags Branding, Identity
+              %li.column-one-fourth.portfolio-item.identity
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} PSB40
+                .tags Identity
+              %li.column-one-fourth.portfolio-item.coding
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} ASPCA
+                .tags Code Development
+              %li.column-one-fourth.portfolio-item.branding
+                %a.image-link{:href => "portfolio-detail.html"}
+                  %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                %h3
+                  %a{:href => "portfolio-detail.html"} Airport Shopping
+                .tags Branding
+          .column-container
+            .column-three-qtr
+              .divider
+              %h3.section-title What's going on?
+              #blog-nav.carousel-nav
+                .back
+                .next
+              .carousel
+                %ul#blog-carousel.slider-container
+                  %li.column-one-fourth
+                    %a.image-link{:href => "blog-post.html"}
+                      %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                    %h3
+                      %a{:href => "blog-post.html"} Lorem Ipsum is simply dummy text of the printing
+                    .date 12th June 2013
+                    %p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of ...
+                    %a{:href => "blog-post.html"} Read More
+                  %li.column-one-fourth
+                    %a.image-link{:href => "blog-post.html"}
+                      %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                    %h3
+                      %a{:href => "blog-post.html"} Contrary to popular belief, Lorem Ipsum is not just text
+                    .date 12th June 2013
+                    %p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of ...
+                    %a{:href => "blog-post.html"} Read More
+                  %li.column-one-fourth
+                    %a.image-link{:href => "blog-post.html"}
+                      %img.fullwidth{:alt => "", :src => "/assets/placeholders/placeholder-large.jpg"}/
+                    %h3
+                      %a{:href => "blog-post.html"} The standard chunk of Lorem Ipsum used since the
+                    .date 12th June 2013
+                    %p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of ...
+                    %a{:href => "blog-post.html"} Read More
+            .column-one-fourth
+              .divider
+              %h3.section-title Testimonials
+              #testimonials-nav.carousel-nav
+                .back
+                .next
+              .carousel
+                %ul#testimonials-carousel.slider-container
+                  %li.column-one-fourth
+                    .testimonial-text
+                      %p "What ever happened to predictability? Everywhere you look, everywhere you go, there's a heart, a hand to hold onto."
+                    .testimonial-name
+                      Joe Bloggs
+                    .testimonial-link
+                      %a{:href => "#"} Company Name
+                  %li.column-one-fourth
+                    .testimonial-text
+                      %p "Basix have proven time and time again that they can deliver results on time and on price!"
+                    .testimonial-name
+                      Joe Bloggs
+                    .testimonial-link
+                      %a{:href => "#"} ThemeForest
+      .footer-container
+        .spacer
+        .content-width
+          .client-logos-container
+            .client-logos-title
+              %span Recent Clients
+            #clients-back
+            #clients-next
+            .carousel
+              %ul#clients-carousel.column-container
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo1.png"}/
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo2.png"}/
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo3.png"}/
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo4.png"}/
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo5.png"}/
+                %li
+                  .logo-outer
+                    .logo-inner
+                      %img{:alt => "", :src => "/assets/client-logos/logo6.png"}/
+        .footer-infobar
+          .content-width
+            If you're looking for a corporate theme that stands out from the usual junk then it's your lucky day!
+        .footer
+          .content-width
+            .column-container
+              .column-one-fourth
+                %img.logo{:alt => "", :height => "17", :src => "/assets/topbar/logo_white.png", :width => "57"}/
+                %p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                %p
+                  %a{:href => "about.html"} Meet the team
+              .column-one-fourth
+                %h3 Latest on Twitter
+                %ul#twitter-feed
+              .column-one-fourth
+                %h3 Latest on Flickr
+                .footer-flickr-container
+              .column-one-fourth
+                %h3 Newsletter
+                .footer-newsletter
+                  %form#newsletter{:action => "#", :method => "post", :name => "newsletter"}
+                    .container
+                      %input.textbox{:name => "name", :placeholder => "Email Address", :type => "text"}/
+                      %input#submit.button{:name => "submit", :type => "submit", :value => "Sign Up"}/
+                %h3 Follow Us
+                %ul.footer-social
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-linkedin-square
+                      .tooltip LinkedIn
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-facebook
+                      .tooltip Facebook
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-twitter
+                      .tooltip Twitter
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-google-plus
+                      .tooltip Google+
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-youtube
+                      .tooltip YouTube
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-pinterest
+                      .tooltip Pinterest
+            .footer-lower-container
+              %ul.footer-lower
+                %li
+                  %a{:href => "index.html"} Home
+                %li
+                  %a{:href => "about.html"} About Us
+                %li
+                  %a{:href => "portfolio.html"} Portfolio
+                %li
+                  %a{:href => "blog.html"} Blog
+                %li
+                  %a{:href => "shortcodes.html"} Shortcodes
+                %li
+                  %a{:href => "contact.html"} Contact Us
+              .footer-copyright
+                Copyright &copy; 2013
+                = succeed "." do
+                  %a{:href => "http://www.artivity.co.uk", :target => "_blank"} Artivity
+                All rights reserved.
+            %a.top-of-page-link{:href => "#"}
+              %i.fa.fa-chevron-up
