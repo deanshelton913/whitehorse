@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "initial-scale=1", :name => "viewport"}
+        %title Home - Basix
+        = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+        = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body.light-bg.home
+    .main-container
+      = render partial: 'shared/header'
+      .main-content
+        .main-content-inner.content-width
+          = yield
+      = render partial: 'shared/footer'
